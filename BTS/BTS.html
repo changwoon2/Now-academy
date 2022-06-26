@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTS</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reset_plus.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link rel="stylesheet" href="css/BTS.css">
+    <link rel="shortcut icon" href="images/fav.png">
+</head>
+
+<body>
+    <!--배경동영상-->
+    <figure class="vid">
+        <video>
+            <source src="images/bts_boy_with_luv_dance.mp4" type="video/mp4">
+        </video>
+        <!--동영상 재생 버튼-->
+        <button>
+            <i class="fas fa-play-circle"></i>
+        </button>
+        <button>
+            <i class="fas fa-pause"></i>
+        </button>
+        <button>
+            <i class="fas fa-stop-circle"></i>
+        </button>
+    </figure>
+    <header>
+        <h1>
+            <a href="http://changwoon2.dothome.co.kr"><img src="images/logo.png" alt="로고"></a>
+        </h1>
+        <ul id="gnb">
+            <li>
+                <a href="#">About BTS</a>
+                <ul class="sub">
+                    <li><a href="https://ibighit.com/bts/kor/">HOME</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">PROFILE</a>
+                <ul class="sub">
+                    <li><a href="JavaScript:newPopup('images/member-rm.jpg');">RM</a></li>
+                    <li><a href="JavaScript:newPopup('images/member-jin.jpg');">진</a></li>
+                    <li><a href="JavaScript:newPopup('images/member-suga.jpg');">슈가</a></li>
+                    <li><a href="JavaScript:newPopup('images/member-jhope.jpg');">제이홉</a></li>
+                    <li><a href="JavaScript:newPopup('images/member-jimin.jpg');">지민</a></li>
+                    <li><a href="JavaScript:newPopup('images/member-v.jpg');">뷔</a></li>
+                    <li><a href="JavaScript:newPopup('images/member-jk.jpg');">정국</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">DISCOGRAPHY</a>
+                <ul class="stamp">
+                    <li><a href="https://ibighit.com/bts/kor/discography/detail/map_of_the_soul-persona.php">MAP OF THE SOUL : PERSONA</a></li>
+                    <li><a href="https://ibighit.com/bts/kor/discography/detail/love_yourself-answer.php">LOVE YOURSELF結 ‘ANSWER’</a></li>
+                    <li><a href="https://ibighit.com/bts/kor/discography/detail/love_yourself-tear.php">LOVE YOURSELF轉 ‘TEAR’</a></li>
+                    <li><a href="https://ibighit.com/bts/kor/discography/detail/love_yourself-her.php">LOVE YOURSELF承 ‘HER’</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="https://ibighit.com/bts/kor/schedule/">SCHEDULE</a>
+                <ul class="sub">
+                    <!--<li><a href="#">sub</a></li>
+                    <li><a href="#">sub</a></li>-->
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">TOUR</a>
+                <ul class="stamp">
+                    <li><a href="https://ibighit.com/bts/kor/tour/love_yourself/">BTS WORLD TOUR</a></li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+
+    <!--sns 포지션 fixed-->
+    <ul id="sns">
+        <li>
+            <a href="https://www.facebook.com/bangtan.official">
+                <i class="fab fa-facebook"></i>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://twitter.com/BTS_twt/">
+                <i class="fab fa-twitter-square"></i>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.youtube.com/user/BANGTANTV">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </li>
+
+        <li>
+            <a href="http://cafe.daum.net/BANGTAN">
+                <i class="fas fa-envelope-square"></i>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.instagram.com/bts.bighitofficial/">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </li>
+    </ul>
+    <!--이미지 텍스트-->
+    <section class="txt">
+        <p class="p1">BTS<em>WORLD</em></p>
+        <p class="p2">HEARTBEAT<em>ALL NIGHT</em></p>
+    </section>
+    <!--우측하단 버튼-->
+    <section id="side">
+        <div class="inner">
+            <p>
+                <em>Lemona</em>
+                <a href="btscript1.html">
+                    <img src="images/good03.jpg" alt="버튼1">
+                </a>
+            </p>
+            <p>
+                <em>Dionysus</em>
+                <a href="btscript.html">
+                    <img src="images/good02.jpg" alt="버튼2">
+                </a>
+            </p>
+            <p>
+                <em>고민보다 Go</em>
+                <a href="btscript3.html">
+                    <img src="images/good01.jpg" alt="버튼3">
+                </a>
+            </p>
+        </div>
+        <div class="arrbtn">
+            <i class="fas fa-angle-double-left"></i>
+            <i class="fas fa-angle-double-left"></i>
+            <i class="fas fa-angle-double-left"></i>
+        </div>
+    </section>
+</body>
+
+</html>
+<script src="js/bts.js"></script>
+<script>
+    function newPopup(url) {
+        popupWindow = window.open(url, 'popUpWindow', 'height=600,width=400,left=750,top=50,resizable=yes,scrollbars=yes,toolbar=no,menubar=no,location=no,directories=no,status=no')
+    }
+
+</script>

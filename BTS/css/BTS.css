@@ -1,0 +1,317 @@
+@charset "utf-8";
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    /* background: #111;*/
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+/*배경동영상 박스*/
+.vid {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    /*추후 보이게 할것*/
+    /* display: none;*/
+}
+
+/*동영상 설정*/
+.vid video {
+    width: 100%;
+    height: auto;
+}
+
+/*SNS 영역*/
+#sns {
+    position: fixed;
+    right: 40px;
+    top: 50px;
+}
+
+#sns li {
+    display: inline-block;
+}
+
+#sns li i {
+    font-size: 30px;
+    color: darkgray;
+    padding-left: 20px;
+    opacity: .8;
+    transition: all 0.5s;
+    transform: scale(1);
+}
+
+#sns li:hover i {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/*왼쪽 메뉴 영역*/
+header {
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: hotpink;
+
+}
+
+header h1 {
+    position: absolute;
+    top: -50px;
+}
+
+/*1depth*/
+header #gnb {
+    position: absolute;
+    right: 0;
+    top: 300px;
+    left: 30px;
+}
+
+#gnb li a {
+    display: block;
+    width: 200px;
+    color: #222;
+    font: bold 18px/3 Montserrat, sans-serif;
+    text-align: center;
+    padding-right: 40px;
+}
+
+#gnb li:hover a {
+    background: #222;
+    color: #fff;
+}
+
+/*2depth*/
+#gnb li {
+    /*2depth 위치기준값*/
+    position: relative;
+}
+
+.sub {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+/*li메뉴 호버시 2depth메뉴 나옴*/
+#gnb li:hover .sub {
+    opacity: 0.8;
+    left: 250px;
+}
+
+#gnb .sub a {
+    display: block;
+    width: 150px;
+    height: 40px;
+    color: #fff;
+    font: bold 16px/2.5 Arial, sans-serif;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 3px;
+    transition: all 0.5s;
+}
+
+#gnb .stamp a {
+    display: block;
+    width: 300px;
+    height: 40px;
+    color: #fff;
+    font: bold 16px/2.5 Arial, sans-serif;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 3px;
+    transition: all 0.5s;
+}
+
+#gnb li:hover .stamp {
+    opacity: 0.8;
+    left: 250px;
+}
+
+.stamp {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+/*2depth 배경색 바꾸기*/
+#gnb .sub li:hover > a {
+    background: #b9fb05;
+    color: #222;
+}
+
+/*이미지 텍스트*/
+.txt {
+    position: fixed;
+    right: 40px;
+    top: 200px;
+}
+
+.txt .p1 {
+    font: bold 50px play, sans-serif;
+    color: black;
+    font-style: italic;
+}
+
+.txt .p1 > em {
+    font-size: 80px;
+    color: black;
+    font-family: Monoton, sans-serif;
+}
+
+.txt .p2 {
+    font: bold 40px NanumPenScript, cursive;
+    color: lightcoral;
+}
+
+.txt .p2 > em {
+    font: bold 34px OpenSans, sans-serif;
+    color: blueviolet;
+    margin-left: 20px;
+}
+
+/*우측하단 부모박스*/
+#side {
+    width: 800px;
+    height: 100%;
+    background: #fff;
+    /*추후변경*/
+    opacity: 0.5;
+    position: fixed;
+    right: -800px;
+    top: 0;
+    transform: skewX(-40deg);
+    transition: all 0.5s;
+}
+
+#side:hover {
+    right: -500px;
+    opacity: 0.8;
+}
+
+/*제목,이미지 3개 부모박스*/
+#side .inner {
+    width: 400px;
+    height: 100%;
+    background: hotpink;
+    position: absolute;
+    left: 150px;
+    top: 0;
+    transition: all 1s;
+}
+
+#side:hover .inner {
+    left: 50px;
+}
+
+
+/*제목,이미지 스타일(추후수정)*/
+#side .inner p {
+    width: 300px;
+    height: 100px;
+    position: absolute;
+    left: 50px;
+    transform: translateX(200px);
+}
+
+#side .inner p img {
+    opacity: .3;
+    transition: all 0.5s;
+}
+
+#side .inner p img:hover {
+    opacity: 1;
+}
+
+
+/*이미지 3개 위치설정*/
+#side .inner p:nth-child(1) {
+    bottom: 270px;
+    transition: all 0.4s;
+}
+
+#side .inner p:nth-child(2) {
+    bottom: 160px;
+    transition: all 0.8s;
+}
+
+#side .inner p:nth-child(3) {
+    bottom: 50px;
+    transition: all 1.2s;
+}
+
+/*이미지 위쪽 제목 스타일*/
+#side .inner p > em {
+    display: inline-block;
+    font: bold 16px/1.6 Arial, sans-serif;
+    color: #fff;
+    transform: skewX(40deg);
+}
+
+/*호버시 제목,이미지 스타일 위치잡기*/
+#side:hover .inner p {
+    transform: translateX(0px);
+}
+
+
+
+/*하단화살표*/
+#side .arrbtn {
+    position: absolute;
+    left: 200px;
+    bottom: 40px;
+    transform: skewX(40deg);
+}
+
+#side .arrbtn i {
+    font-size: 60px;
+    color: darkgray;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+#side .arrbtn i:nth-child(1) {
+    animation: ani linear 1.5s 0s infinite;
+}
+
+#side .arrbtn i:nth-child(2) {
+    animation: ani linear 1.5s 0.5s infinite;
+}
+
+#side .arrbtn i:nth-child(3) {
+    animation: ani linear 1.5s 1s infinite;
+}
+
+/*호버시 화살표 사라지게 하기*/
+#side:hover .arrbtn {
+    left: 900px;
+}
+
+
+/*애니메이션 키프레임*/
+@keyframes ani {
+    from {
+        opacity: 1;
+        transform: scale(1);
+        right: 0;
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(1.5);
+        right: 100px;
+    }
+
+}

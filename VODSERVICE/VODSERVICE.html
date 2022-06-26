@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=1">
+    <title>VOD</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/VOD.css">
+
+</head>
+
+<body>
+    <div id="wrap">
+        <!--이미지슬라이드영역-->
+        <article class="slideshow_container">
+            <!--슬라이드 이미지1-->
+            <div class="slide">
+                <div class="text">ONE</div>
+                <img src="images/movie.jpg" alt="메인사진1">
+                <div class="number_text">1 / 3</div>
+            </div>
+            <!--슬라이드 이미지2-->
+            <div class="slide">
+                <div class="text">TWO</div>
+                <img src="images/movie1.jpg" alt="메인사진2">
+                <div class="number_text">2 / 3</div>
+            </div>
+            <!--슬라이드 이미지3-->
+            <div class="slide">
+                <div class="text">THREE</div>
+                <img src="images/movie2.jpg" alt="메인사진3">
+                <div class="number_text">3 / 5</div>
+            </div>
+            <div class="slide">
+                <div class="text">FOUR</div>
+                <img src="images/movie3.jpg" alt="메인사진3">
+                <div class="number_text">4 / 5</div>
+            </div>
+            <div class="slide">
+                <div class="text">FIVE</div>
+                <img src="images/movie4.jpg" alt="메인사진3">
+                <div class="number_text">5 / 5</div>
+            </div>
+            <!--이전버튼-->
+            <a href="#" class="prev" onclick="plusSlides(-1);">&lt;&lt;</a>
+            <!--다음버튼-->
+            <a href="#" class="next" onclick="plusSlides(1);">&gt;&gt;</a>
+        </article>
+        <br>
+        <div class="circle">
+            <span class="dot" onclick="currentSlides(1);"></span>
+            <span class="dot" onclick="currentSlides(2);"></span>
+            <span class="dot" onclick="currentSlides(3);"></span>
+            <span class="dot" onclick="currentSlides(4);"></span>
+            <span class="dot" onclick="currentSlides(5);"></span>
+        </div>
+        <section>
+        </section>
+        <footer>
+            <p>
+                Welcome to VOD
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+    <script src="js/VOD.js"></script>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTS</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="images/fav.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            vertical-align: top;
+            border: 0;
+        }
+
+        #wrap {
+            width: 100%;
+        }
+
+        article {
+            height: 450px;
+        }
+
+        .slide {
+            background: linear-gradient(#f6a91f, #fac112) fixed;
+            text-align: center;
+        }
+
+        .slide img {
+            height: 500px;
+        }
+
+        /*비디오영역*/
+        #myVideo {
+            width: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 433px;
+        }
+
+        #myBtn {
+            position: absolute;
+            left: 73%;
+            top: 44%;
+            transform: translateX(-50%);
+            border: none;
+            background: none;
+        }
+
+        #myBtn i {
+            font-size: 96px;
+            color: gold;
+            cursor: pointer;
+        }
+
+        #myBtn i:hover {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <article>
+            <div class="slide">
+                <img src="images/bts-lemona-3.jpg" alt="lemona">
+            </div>
+        </article>
+        <aside>
+            <div class="content">
+                <video id="myVideo">
+                    <source src="images/bts-lemona-3.mp4" type="video/mp4">
+                </video>
+                <button id="myBtn">
+                    <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                </button>
+            </div>
+        </aside>
+    </div>
+</body>
+
+</html>
+<script>
+    $('#myBtn').click(function() {
+        var video = $('#myVideo');
+        var btn = $('#myBtn');
+        if (video.get(0).paused) {
+            video.get(0).play();
+            btn.html('<i class="fa fa-pause-circle-o" aria-hidden="true"></i>');
+        }else{
+            video.get(0).pause();
+            btn.html('<i class="fa fa-play-circle-o" aria-hidden="true"></i>');
+        }
+    });
+
+</script>
